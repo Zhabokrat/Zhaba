@@ -1,0 +1,32 @@
+Overview
+This script defines a 2D character controller for a platformer-style game. It includes features like movement, jumping, wall sliding, and wall clinging. The character uses AnimatedSprite2D for visual animations, and its physics-based movement is handled using Godot's move_and_slide() method.
+
+Constants
+SPEED
+Value: 300.0
+Description: Determines the horizontal speed of the character.
+JUMP_VELOCITY
+Value: -275.0
+Description: Controls the initial upward velocity when the character jumps.
+GRAVITY
+Value: 800.0
+Description: Gravity applied to the character when not grounded.
+JUMP_HOLD_TIME
+Value: 0.3
+Description: Maximum time (in seconds) the jump button can be held to extend the jump.
+wall_slide_gravity
+Value: 200.0
+Description: Reduced gravity applied when the character is sliding along a wall.
+Variables
+jump_time
+Type: float
+Default Value: 0.0
+Description: Tracks how long the jump button has been held during a jump.
+is_jumping
+Type: bool
+Default Value: false
+Description: Indicates whether the character is currently jumping.
+sprite
+Type: AnimatedSprite2D
+Initialization: @onready var sprite = $AnimatedSprite2D
+Description: Reference to the animated sprite node for controlling animations.
